@@ -20,4 +20,10 @@ inventario = [
     [104, "Regla", 5, 15],
     [105, "Marcador", 25, 25]
 ]
+# Lista de pedidos
+print("Lista de pedidos:")
+for articulo in inventario:
+    codigo, nombre, stock_actual, stock_minimo = articulo
+    cantidad = calcular_pedido(stock_actual, stock_minimo)
+    print(f"- {nombre}: {cantidad} unidades a pedir")
 
